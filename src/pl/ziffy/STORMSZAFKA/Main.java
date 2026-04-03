@@ -9,7 +9,7 @@ import net.milkbowl.vault.economy.Economy;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import java.time.format.DateTimeFormatter;
-import pl.ziffy.STORMSZAFKA.costumes.L;
+import pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService6;
 import java.util.Map;
 import pl.ziffy.sTORMSZAFKA.bstats.charts.SimplePie;
 import pl.ziffy.sTORMSZAFKA.bstats.charts.DrilldownPie;
@@ -26,17 +26,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.CopyOption;
 import java.io.File;
-import pl.ziffy.STORMSZAFKA.data.C;
-import pl.ziffy.STORMSZAFKA.utils.D;
+import pl.ziffy.STORMSZAFKA.data.DataDataModel2;
+import pl.ziffy.STORMSZAFKA.utils.UtilsUtilityService3;
 import org.bukkit.scheduler.BukkitTask;
-import pl.ziffy.STORMSZAFKA.costumes.K;
-import pl.ziffy.STORMSZAFKA.costumes.H;
-import pl.ziffy.STORMSZAFKA.costumes.F;
-import pl.ziffy.STORMSZAFKA.data.E;
-import pl.ziffy.STORMSZAFKA.ui.gui.B;
-import pl.ziffy.STORMSZAFKA.pets.G;
+import pl.ziffy.STORMSZAFKA.costumes.CostumesListener6;
+import pl.ziffy.STORMSZAFKA.costumes.CostumesListener5;
+import pl.ziffy.STORMSZAFKA.costumes.CostumesListener4;
+import pl.ziffy.STORMSZAFKA.data.DataDataModel3;
+import pl.ziffy.STORMSZAFKA.ui.gui.UiGuiView1;
+import pl.ziffy.STORMSZAFKA.pets.PetsPetService6;
 import java.util.Set;
-import pl.ziffy.STORMSZAFKA.pets.A;
+import pl.ziffy.STORMSZAFKA.pets.PetsPetService1;
 import java.util.UUID;
 import java.util.HashMap;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -47,22 +47,22 @@ public class Main extends JavaPlugin
     public static Set<String> disabledPets;
     private static G O;
     private static B J;
-    private static pl.ziffy.STORMSZAFKA.messages.A F;
+    private static pl.ziffy.STORMSZAFKA.messages.MessagesMessageService1 F;
     private static Main S;
-    private pl.ziffy.STORMSZAFKA.costumes.B I;
-    private pl.ziffy.STORMSZAFKA.costumes.G K;
-    private pl.ziffy.STORMSZAFKA.costumes.A A;
+    private pl.ziffy.STORMSZAFKA.costumes.CostumesListener2 I;
+    private pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService3 K;
+    private pl.ziffy.STORMSZAFKA.costumes.CostumesListener1 A;
     private E N;
-    private pl.ziffy.STORMSZAFKA.pets.B G;
+    private pl.ziffy.STORMSZAFKA.pets.PetsPetService2 G;
     private F P;
     private H M;
     private K Q;
     private BukkitTask H;
     private D R;
-    private pl.ziffy.STORMSZAFKA.regions.B E;
-    private pl.ziffy.STORMSZAFKA.regions.A B;
+    private pl.ziffy.STORMSZAFKA.regions.RegionsRegionService2 E;
+    private pl.ziffy.STORMSZAFKA.regions.RegionsRegionService1 B;
     private C D;
-    private pl.ziffy.STORMSZAFKA.data.B C;
+    private pl.ziffy.STORMSZAFKA.data.DataDataModel1 C;
     private String L;
     
     public File getCustomDataFolder() {
@@ -103,7 +103,7 @@ public class Main extends JavaPlugin
     
     private void K() {
         for (final Player player : Bukkit.getOnlinePlayers()) {
-            if (Main.savedPetMap.containsKey(player.getUniqueId()) && !pl.ziffy.STORMSZAFKA.pets.E.K(player)) {
+            if (Main.savedPetMap.containsKey(player.getUniqueId()) && !pl.ziffy.STORMSZAFKA.pets.PetsPetService4.K(player)) {
                 try {
                     final A a = Main.savedPetMap.get(player.getUniqueId());
                     String a2 = a.A;
@@ -112,13 +112,13 @@ public class Main extends JavaPlugin
                     }
                     if (this.A(a.C) != null) {
                         if (a.B != null && !a.B.equals("brak")) {
-                            pl.ziffy.STORMSZAFKA.pets.E.A(player, a.C, a2, a.B);
+                            pl.ziffy.STORMSZAFKA.pets.PetsPetService4.A(player, a.C, a2, a.B);
                         }
                         else {
-                            pl.ziffy.STORMSZAFKA.pets.E.A(player, a.C, a2);
+                            pl.ziffy.STORMSZAFKA.pets.PetsPetService4.A(player, a.C, a2);
                         }
                         if (a.D) {
-                            Bukkit.getScheduler().runTaskLater((Plugin)this, () -> pl.ziffy.STORMSZAFKA.pets.E.D(player2), 5L);
+                            Bukkit.getScheduler().runTaskLater((Plugin)this, () -> pl.ziffy.STORMSZAFKA.pets.PetsPetService4.D(player2), 5L);
                         }
                     }
                     Main.savedPetMap.remove(player.getUniqueId());
@@ -134,27 +134,27 @@ public class Main extends JavaPlugin
         this.P = new F(this);
         this.M = new H(this);
         this.Q = new K(this);
-        pl.ziffy.STORMSZAFKA.costumes.E.A(this.P);
-        pl.ziffy.STORMSZAFKA.costumes.E.A(this.Q);
-        pl.ziffy.STORMSZAFKA.costumes.E.A(this.N);
+        pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService2.A(this.P);
+        pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService2.A(this.Q);
+        pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService2.A(this.N);
     }
     
     private void E() {
-        final Listener[] array = { (Listener)new pl.ziffy.STORMSZAFKA.listeners.A(), (Listener)new pl.ziffy.STORMSZAFKA.ui.menu.A(), (Listener)new pl.ziffy.STORMSZAFKA.listeners.B(), (Listener)new pl.ziffy.STORMSZAFKA.regions.C(this.E, this.B), (Listener)new pl.ziffy.STORMSZAFKA.utils.A(), (Listener)new pl.ziffy.STORMSZAFKA.pets.C(this), (Listener)new pl.ziffy.STORMSZAFKA.costumes.D(this), (Listener)new pl.ziffy.STORMSZAFKA.costumes.B((Plugin)this), (Listener)new pl.ziffy.STORMSZAFKA.costumes.A((Plugin)this), (Listener)new pl.ziffy.STORMSZAFKA.costumes.preview.A(), (Listener)new pl.ziffy.STORMSZAFKA.ui.menu.B(), (Listener)new pl.ziffy.STORMSZAFKA.listeners.D(), (Listener)new pl.ziffy.STORMSZAFKA.listeners.C(), (Listener)new pl.ziffy.STORMSZAFKA.ui.gui.A(), (Listener)new pl.ziffy.STORMSZAFKA.pets.editors.B(), (Listener)new pl.ziffy.STORMSZAFKA.pets.editors.D(), (Listener)new pl.ziffy.STORMSZAFKA.costumes.editors.C(), (Listener)new pl.ziffy.STORMSZAFKA.costumes.editors.A(), (Listener)new pl.ziffy.STORMSZAFKA.costumes.editors.B(), (Listener)new pl.ziffy.STORMSZAFKA.costumes.editors.E() };
+        final Listener[] array = { (Listener)new pl.ziffy.STORMSZAFKA.listeners.ListenersListener1(), (Listener)new pl.ziffy.STORMSZAFKA.ui.menu.UiMenuListener1(), (Listener)new pl.ziffy.STORMSZAFKA.listeners.ListenersListener2(), (Listener)new pl.ziffy.STORMSZAFKA.regions.RegionsListener1(this.E, this.B), (Listener)new pl.ziffy.STORMSZAFKA.utils.UtilsListener1(), (Listener)new pl.ziffy.STORMSZAFKA.pets.PetsListener1(this), (Listener)new pl.ziffy.STORMSZAFKA.costumes.CostumesListener3(this), (Listener)new pl.ziffy.STORMSZAFKA.costumes.CostumesListener2((Plugin)this), (Listener)new pl.ziffy.STORMSZAFKA.costumes.CostumesListener1((Plugin)this), (Listener)new pl.ziffy.STORMSZAFKA.costumes.preview.CostumesPreviewListener1(), (Listener)new pl.ziffy.STORMSZAFKA.ui.menu.UiMenuListener2(), (Listener)new pl.ziffy.STORMSZAFKA.listeners.ListenersListener4(), (Listener)new pl.ziffy.STORMSZAFKA.listeners.ListenersListener3(), (Listener)new pl.ziffy.STORMSZAFKA.ui.gui.UiGuiListener1(), (Listener)new pl.ziffy.STORMSZAFKA.pets.editors.PetsEditorsListener1(), (Listener)new pl.ziffy.STORMSZAFKA.pets.editors.PetsEditorsListener2(), (Listener)new pl.ziffy.STORMSZAFKA.costumes.editors.CostumesEditorsListener3(), (Listener)new pl.ziffy.STORMSZAFKA.costumes.editors.CostumesEditorsListener1(), (Listener)new pl.ziffy.STORMSZAFKA.costumes.editors.CostumesEditorsListener2(), (Listener)new pl.ziffy.STORMSZAFKA.costumes.editors.CostumesEditorsListener4() };
         for (int length = array.length, i = 0; i < length; ++i) {
             this.getServer().getPluginManager().registerEvents(array[i], (Plugin)this);
         }
     }
     
     private void A() {
-        Main.F = new pl.ziffy.STORMSZAFKA.messages.A((Plugin)this);
+        Main.F = new pl.ziffy.STORMSZAFKA.messages.MessagesMessageService1((Plugin)this);
         Main.O = new G((Plugin)this);
         Main.J = new B((Plugin)this);
         if (Main.J != null) {
-            pl.ziffy.STORMSZAFKA.ui.menu.A.setConfigManager(Main.J);
-            pl.ziffy.STORMSZAFKA.pets.editors.C.A(Main.J);
-            pl.ziffy.STORMSZAFKA.costumes.preview.A.setConfigManager(Main.J);
-            pl.ziffy.STORMSZAFKA.utils.A.setConfigManager(Main.J);
+            pl.ziffy.STORMSZAFKA.ui.menu.UiMenuListener1.setConfigManager(Main.J);
+            pl.ziffy.STORMSZAFKA.pets.editors.PetsEditorsPetEditorController2.A(Main.J);
+            pl.ziffy.STORMSZAFKA.costumes.preview.CostumesPreviewListener1.setConfigManager(Main.J);
+            pl.ziffy.STORMSZAFKA.utils.UtilsListener1.setConfigManager(Main.J);
         }
         if (Main.O != null) {
             Main.O.J("bobas");
@@ -186,14 +186,14 @@ public class Main extends JavaPlugin
         (Main.S = this).reloadConfig();
         if (this.getConfig().getBoolean("settings.bStats", true)) {
             final Metrics metrics = new Metrics(this, 25974);
-            metrics.addCustomChart(new SingleLineChart("active_pets", () -> pl.ziffy.STORMSZAFKA.pets.E.F.size()));
+            metrics.addCustomChart(new SingleLineChart("active_pets", () -> pl.ziffy.STORMSZAFKA.pets.PetsPetService4.F.size()));
             metrics.addCustomChart(new DrilldownPie("pet_types", () -> {
                 final HashMap hashMap = new HashMap();
                 final HashMap hashMap2 = new HashMap();
-                pl.ziffy.STORMSZAFKA.pets.E.F.values().iterator();
+                pl.ziffy.STORMSZAFKA.pets.PetsPetService4.F.values().iterator();
                 final Iterator iterator2;
                 while (iterator2.hasNext()) {
-                    pl.ziffy.STORMSZAFKA.pets.E.A(iterator2.next().A);
+                    pl.ziffy.STORMSZAFKA.pets.PetsPetService4.A(iterator2.next().A);
                     final String key;
                     hashMap2.put(key, (int)hashMap2.getOrDefault(key, 0) + 1);
                 }
@@ -219,23 +219,23 @@ public class Main extends JavaPlugin
         else {
             this.D = null;
         }
-        (this.G = new pl.ziffy.STORMSZAFKA.pets.B(this, Main.savedPetMap)).A(this.D);
-        (this.C = new pl.ziffy.STORMSZAFKA.data.B(this)).A(this.D);
+        (this.G = new pl.ziffy.STORMSZAFKA.pets.PetsPetService2(this, Main.savedPetMap)).A(this.D);
+        (this.C = new pl.ziffy.STORMSZAFKA.data.DataDataModel1(this)).A(this.D);
         this.G.A(Main.disabledPets);
-        pl.ziffy.STORMSZAFKA.pets.E.A(this);
-        pl.ziffy.STORMSZAFKA.fragments.B.C();
-        pl.ziffy.STORMSZAFKA.fragments.B.A();
-        pl.ziffy.STORMSZAFKA.costumes.L.A(this);
-        this.E = new pl.ziffy.STORMSZAFKA.regions.B((Plugin)this);
-        this.B = new pl.ziffy.STORMSZAFKA.regions.A((Plugin)this);
-        new pl.ziffy.STORMSZAFKA.commands.C(this).setRegionCommand(new pl.ziffy.STORMSZAFKA.commands.D(this, this.E, this.B));
+        pl.ziffy.STORMSZAFKA.pets.PetsPetService4.A(this);
+        pl.ziffy.STORMSZAFKA.fragments.FragmentsFragmentModel1.C();
+        pl.ziffy.STORMSZAFKA.fragments.FragmentsFragmentModel1.A();
+        pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService6.A(this);
+        this.E = new pl.ziffy.STORMSZAFKA.regions.RegionsRegionService2((Plugin)this);
+        this.B = new pl.ziffy.STORMSZAFKA.regions.RegionsRegionService1((Plugin)this);
+        new pl.ziffy.STORMSZAFKA.commands.CommandsCommandExecutor3(this).setRegionCommand(new pl.ziffy.STORMSZAFKA.commands.CommandsCommandExecutor4(this, this.E, this.B));
         this.E();
         this.G.B();
         this.K();
         this.N = new E((Plugin)this);
-        this.A = new pl.ziffy.STORMSZAFKA.costumes.A((Plugin)this);
+        this.A = new pl.ziffy.STORMSZAFKA.costumes.CostumesListener1((Plugin)this);
         this.getServer().getPluginManager().registerEvents((Listener)this.A, (Plugin)this);
-        this.K = new pl.ziffy.STORMSZAFKA.costumes.G(this);
+        this.K = new pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService3(this);
         this.F();
         (this.R = new D(this)).A();
         final Iterator iterator = Bukkit.getOnlinePlayers().iterator();
@@ -250,7 +250,7 @@ public class Main extends JavaPlugin
         if (!this.getConfig().getBoolean("settings.check-updates", true)) {
             return;
         }
-        new pl.ziffy.STORMSZAFKA.utils.update.A(this, 126020).A(this.L, b -> {
+        new pl.ziffy.STORMSZAFKA.utils.update.UtilsUpdateUtilityService1(this, 126020).A(this.L, b -> {
             if (b == null) {
                 this.getLogger().warning("Nie uda\u0142o si\u0119 sprawdzi\u0107 aktualizacji.");
             }
@@ -271,8 +271,8 @@ public class Main extends JavaPlugin
         });
     }
     
-    private pl.ziffy.STORMSZAFKA.pets.D A(final String s) {
-        return pl.ziffy.STORMSZAFKA.pets.F.A(s);
+    private pl.ziffy.STORMSZAFKA.pets.PetsPetService3 A(final String s) {
+        return pl.ziffy.STORMSZAFKA.pets.PetsPetService5.A(s);
     }
     
     public void onDisable() {
@@ -289,14 +289,14 @@ public class Main extends JavaPlugin
         }
         int n = 0;
         for (final Player player : Bukkit.getOnlinePlayers()) {
-            if (pl.ziffy.STORMSZAFKA.pets.E.K(player)) {
+            if (pl.ziffy.STORMSZAFKA.pets.PetsPetService4.K(player)) {
                 try {
-                    final pl.ziffy.STORMSZAFKA.pets.E._A a = pl.ziffy.STORMSZAFKA.pets.E.F.get(player.getUniqueId());
+                    final pl.ziffy.STORMSZAFKA.pets.PetsPetService4._A a = pl.ziffy.STORMSZAFKA.pets.PetsPetService4.F.get(player.getUniqueId());
                     if (a == null) {
                         continue;
                     }
                     final String c = a.C;
-                    final boolean i = pl.ziffy.STORMSZAFKA.pets.E.I(player);
+                    final boolean i = pl.ziffy.STORMSZAFKA.pets.PetsPetService4.I(player);
                     final String b = a.B;
                     String format = null;
                     if (a.F != null) {
@@ -316,8 +316,8 @@ public class Main extends JavaPlugin
         if (this.C != null) {
             this.C.I();
         }
-        pl.ziffy.STORMSZAFKA.pets.E.E();
-        pl.ziffy.STORMSZAFKA.costumes.L.M();
+        pl.ziffy.STORMSZAFKA.pets.PetsPetService4.E();
+        pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService6.M();
         if (this.P != null) {
             this.P.cleanup();
         }
@@ -325,8 +325,8 @@ public class Main extends JavaPlugin
             this.Q.cleanup();
         }
         for (final Player player2 : Bukkit.getOnlinePlayers()) {
-            if (pl.ziffy.STORMSZAFKA.costumes.L.F(player2)) {
-                pl.ziffy.STORMSZAFKA.costumes.L.C(player2);
+            if (pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService6.F(player2)) {
+                pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService6.C(player2);
             }
         }
         if (this.N != null) {
@@ -397,8 +397,8 @@ public class Main extends JavaPlugin
             if (this.P != null) {}
             if (this.M != null) {}
             if (this.Q != null) {}
-            pl.ziffy.STORMSZAFKA.pets.E.B();
-            pl.ziffy.STORMSZAFKA.costumes.L.A();
+            pl.ziffy.STORMSZAFKA.pets.PetsPetService4.B();
+            pl.ziffy.STORMSZAFKA.costumes.CostumesCostumeService6.A();
         }
         catch (final Exception ex) {
             ex.printStackTrace();
@@ -424,15 +424,15 @@ public class Main extends JavaPlugin
         return Main.S;
     }
     
-    public pl.ziffy.STORMSZAFKA.pets.E getPetManager() {
-        return (Bukkit.getServicesManager().getRegistration((Class)pl.ziffy.STORMSZAFKA.pets.E.class) != null) ? ((pl.ziffy.STORMSZAFKA.pets.E)Bukkit.getServicesManager().getRegistration((Class)pl.ziffy.STORMSZAFKA.pets.E.class).getProvider()) : null;
+    public pl.ziffy.STORMSZAFKA.pets.PetsPetService4 getPetManager() {
+        return (Bukkit.getServicesManager().getRegistration((Class)pl.ziffy.STORMSZAFKA.pets.PetsPetService4.class) != null) ? ((pl.ziffy.STORMSZAFKA.pets.PetsPetService4)Bukkit.getServicesManager().getRegistration((Class)pl.ziffy.STORMSZAFKA.pets.PetsPetService4.class).getProvider()) : null;
     }
     
     public static B getMenuConfigManager() {
         return Main.J;
     }
     
-    public static pl.ziffy.STORMSZAFKA.messages.A getLanguageManager() {
+    public static pl.ziffy.STORMSZAFKA.messages.MessagesMessageService1 getLanguageManager() {
         return Main.F;
     }
     
@@ -453,7 +453,7 @@ public class Main extends JavaPlugin
     }
     
     public static String translateHexColors(final String s) {
-        return pl.ziffy.STORMSZAFKA.utils.B.A(s);
+        return pl.ziffy.STORMSZAFKA.utils.UtilsUtilityService1.A(s);
     }
     
     public D getEconomyManager() {
@@ -468,15 +468,15 @@ public class Main extends JavaPlugin
         return this.D;
     }
     
-    public pl.ziffy.STORMSZAFKA.data.B getSakiewkaDataManager() {
+    public pl.ziffy.STORMSZAFKA.data.DataDataModel1 getSakiewkaDataManager() {
         return this.C;
     }
     
-    public pl.ziffy.STORMSZAFKA.pets.B getPetDataManager() {
+    public pl.ziffy.STORMSZAFKA.pets.PetsPetService2 getPetDataManager() {
         return this.G;
     }
     
-    public pl.ziffy.STORMSZAFKA.regions.B getRegionManager() {
+    public pl.ziffy.STORMSZAFKA.regions.RegionsRegionService2 getRegionManager() {
         return this.E;
     }
     
