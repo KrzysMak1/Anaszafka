@@ -1,0 +1,90 @@
+# Konfiguracja Kostiumu Zabójczego Królika
+
+# Przedmiot aktywacyjny (ten który gracz dostaje do ekwipunku)
+activation_item:
+  material: LEATHER_CHESTPLATE
+  display_name: "&7Kostium &fzabójczego królika &7na czas &3{time}"
+  preview_display_name: "&7Kostium &fzabójczego królika"
+  lore:
+    - "&8Unikatowa wersja!"
+    - "&7Został on wydany w trakcie &fwydarzenia"
+    - "&fwielkanocnego 2025&7."
+    - "&7"
+    - "&7Dzięki temu przedmiotowi otrzymasz"
+    - "&funikatowy&7 wygląd oraz &fepickie &7bonusy."
+    - "&7"
+    - "&7Lista bonusów:"
+    - "&8 » &e100% &7odporności od upadku"
+    - "&8 » &7Po pęknięciu &etotemu otrzymujesz &csiłę 2"
+    - "&8 » &7Stały efekt &eszybkiego kopania 2"
+    - "&8 » &7Możliwość &bpodwójnego skoku &7co &315 sekund"
+  custom_model_data: 0
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+  leather_color: "255,255,255"  # Biały
+
+# Wygląd zbroi na graczu
+armor_appearance:
+  display_name: "&7Zbroja &fZabójczego Królika"
+  base_lore:
+    - "&7"
+    - "&e&lKliknij&r &7aby przełączyć całą &fzbroję&7!"
+  
+  # Kolory poszczególnych części zbroi (R,G,B)
+  armor_colors:
+    chestplate: "255,255,255"  # Biały
+    leggings: "255,255,255"    # Biały
+    boots: "255,255,255"       # Biały
+  
+  # Tekstura głowy (player head)
+  helmet:
+    primary_texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWY5ODMzN2I4MjQyMjI5ZDk1ZGEzMDkwNzU1Nzg5Nzc4YjE4YmY1ZDA3ZDYxZjYyMGNkYmRiYmQyOWZhNjE1In19fQ=="
+  
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+
+#Efekty kostiumu
+effects:
+  # Ochrona przed upadkiem
+  fall_DAMAGE_protection:
+    enabled: true
+    reduction: 1.0  # 100% redukcji (brakobrażeń)
+  
+  # Siła po użyciu totemu
+  totem_strength:
+    enabled: true
+    duration: 200  # 10 sekund (200 ticków)
+    amplifier: 1   # Poziom 2 (0 = poziom 1, 1 = poziom 2)
+  
+  # Szybkie kopanie
+  fast_digging:
+    enabled: true
+    amplifier: 1  # Poziom 2 (0 = poziom 1, 1 = poziom 2)
+  
+  # Podwójny skok
+  double_jump:
+    enabled: true
+    cooldown: 15000  # 15 sekund w ms
+  
+  # Dźwięki
+  sounds:
+    equip: ITEM_ARMOR_EQUIP_LEATHER
+    equip_volume: 1.0
+    equip_pitch: 1.0
+    double_jump: ENTITY_ENDER_DRAGON_FLAP
+    double_jump_volume: 0.5
+    double_jump_pitch: 2.0
+    totem_strength: ENTITY_PLAYER_LEVELUP
+    totem_strength_volume: 1.0
+    totem_strength_pitch: 1.5
+
+# Przedłużanie kostiumu
+extension:
+  enabled: true
+  cost_per_day: 5000  # Koszt w walucie serwerowej za 1 dzień przedłużenia

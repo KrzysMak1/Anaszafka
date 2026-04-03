@@ -1,0 +1,216 @@
+# Polski plik językowy dla pluginu STORMSZAFKA
+# Wersja 2.0
+#
+# UWAGA: Każda wiadomość może być:
+# 1. Prostym tekstem (kompatybilność wstecz):
+#    message: "&aTo jest prosta wiadomość"
+#
+# 2. Złożoną wiadomością z chat/title/subtitle/actionbar:
+#    message:
+#      chat: "&aWiadomość na chacie"
+#      title: "&6Tytuł"
+#      subtitle: "&7Podtytuł"
+#      fade-in: 10
+#      stay: 70
+#      fade-out: 20
+#      actionbar: "&eActionbar"
+#
+# Wszystkie pola są opcjonalne - możesz użyć tylko tych, których potrzebujesz!
+
+general:
+  prefix: "&8[&bSTORMSZAFKA&8] &7"
+  no-permission: "&cNie masz uprawnień do użycia tej komendy!"
+  player-only: "&cTa komenda może być użyta tylko przez gracza!"
+  reload-success: "&aKonfiguracja pluginu została przeładowana!"
+  unknown-command: "&cNieznana komenda! Użyj &7/stormszafka help &caby zobaczyć dostępne komendy."
+
+pet:
+  already-active: "&8» &#FB0808Masz już &7aktywnego &fpeta&7!"
+  already-active-item:
+    chat: "&8» &7Masz już aktywnego &#FB0808peta&7! Zdejmij go najpierw używając komendy &f/szafka&7!"
+    actionbar: "&#FB0808Masz już &7aktywnego &fpeta&7!"
+  not-active: "&8» &#FB0808Nie masz &7aktywnego &fpeta&7!"
+  activated:
+    chat: "&8» &7Pomyślnie &#08FB0Dzałożyłeś&7 peta &f%pet_name%&7! Aby go zdjąć wpisz komendę &n/szafka&7!"
+    subtitle: "&7Pet &#08FB0D%pet_name% &7został &fzałożony&7!"
+    fade-in: 10
+    stay: 50
+    fade-out: 10
+    actionbar: "&7Pomyślnie &fzałożyłeś&7 peta &#08FB0D%pet_name%&7!"
+  activation-failed:
+    chat: "&8» &#FB0808Nie udało &7się aktywować &fpeta&7!"
+    actionbar: "&#FB0808Nie udało &7się aktywować &fpeta&7!"
+  removed:
+    chat: "&8» &7Pomyślnie &fzdjąłeś&7 peta &#08FB0D%pet_name%&7!"
+    subtitle: "&7Pet &#08FB0D%pet_name% &7został &fzdjęty&7!"
+    fade-in: 10
+    stay: 50
+    fade-out: 10
+    actionbar: "&7Pomyślnie &fzdjąłeś&7 peta &#08FB0D%pet_name%&7!"
+  disabled: "&8» &7Ten pet jest obecnie &#FB0808wyłączony&7!"
+  disabled-item:
+    chat: "&8» &7Pet &f%pet_type% &7jest obecnie &#FB0808wyłączony&7!"
+    actionbar: "&7Pet &f%pet_type% &7jest &#FB0808wyłączony&7!"
+  invalid-type: "&8» &#FB0808Nieprawidłowy &7typ &fpeta&7!"
+  invalid-type-item:
+    chat: "&8» &7Nie można &#FB0808rozpoznać &7typu &fpeta&7!"
+    actionbar: "&7Nie można &#FB0808rozpoznać &7typu &fpeta&7!"
+  expired:
+    chat: "&8» &7Twój pet &f%pet_name% &c&#FB0808wygasł&7!"
+    subtitle: "&7Pet &f%pet_name% &7został &#FB0808usunięty&7!"
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+    actionbar: "&7Pet &f%pet_name% &7&#FB0808wygasł&7!"
+  expired-item:
+    chat: "&8» &7Ten pet &#FB0808wygasł &7i nie może być aktywowany!"
+    subtitle: "&7Ten &fpet &7już nie jest &#FB0808ważny&7!"
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+    actionbar: "&7Pet &fwygasł &7i nie może być &#FB0808aktywowany&7!"
+  visibility:
+    hidden: "&8» &7Twój &fpet&7 jest teraz &#FB0808niewidoczny&7!"
+    visible: "&8» &7Twój &fpet&7 jest teraz &#08FB0Dwidoczny&7!"
+  cooldown: "&8» &#FB0808Musisz poczekać &7zanim użyjesz tej funkcji ponownie!"
+  plugin-disabled: "&8» &7Usunięto peta z powodu &#FB0808wyłączenia &7pluginu."
+  config-updated: "&8» &7Konfiguracja peta została &#08FB0Dzaktualizowana&7."
+  inventory-full: "&8» &7Twój ekwipunek jest &#FB0808pełny&7! Przedmiot peta &#08FB0D%pet_type% &7został upuszczony na ziemię."
+  received-item: "&8» &fOtrzymano &7przedmiot peta &#08FB0D%pet_type%&7!"
+  removed-disabled: "&8» &7Twój pet został &#FB0808usunięty&7, ponieważ został wyłączony w konfiguracji."
+  extension:
+    success:
+      chat: "&8» &7Pomyślnie przedłużono peta o &f1 dzień &7serc! Zapłacono &#18FF00%cost% serc"
+      title: "&#18FF00Pomyślnie&7 przedłużono &f1 dzień&7!"
+      fade-in: 10
+      stay: 30
+      fade-out: 15
+    insufficient-fragments: "&8» &7Nie masz wystarczająco &fserc&7! Potrzebujesz &#FF0000%cost% serc&7, a posiadasz &f%balance% serc"
+
+costume:
+  already-active: "&8» &#FB0808Masz już &7aktywny &fkostium&7!"
+  already-active-item:
+    chat: "&8» &7Masz już aktywny &#FB0808kostium&7! Zdejmij go najpierw używając komendy &n/szafka&7!"
+    actionbar: "&#FB0808Masz już &7aktywny &fkostium&7!"
+  not-active: "&8» &#FB0808Nie masz &7aktywnego &fkostiumu&7!"
+  activated:
+    chat: "&8» &7Pomyślnie &fzałożyłeś&7 kostium &#08FB0D%costume_name%&7!"
+    subtitle: "&7Kostium &f%costume_name% &7został &#08FB0Dzałożony&7!"
+    fade-in: 10
+    stay: 50
+    fade-out: 10
+    actionbar: "&7Pomyślnie &#08FB0Dzałożyłeś&7 kostium &f%costume_name%&7!"
+  activation-failed:
+    chat: "&8» &#FB0808Nie udało się &7aktywować &fkostiumu&7!"
+    actionbar: "&#FB0808Nie udało się &7aktywować &fkostiumu&7!"
+  removed:
+    chat: "&8» &7Pomyślnie &#08FB0Dzdjąłeś&7 kostium &f%costume_name%&7!"
+    subtitle: "&7Kostium &f%costume_name% &7został &#08FB0Dzdjęty&7!"
+    fade-in: 10
+    stay: 50
+    fade-out: 10
+    actionbar: "&7Pomyślnie &#08FB0Dzdjąłeś&7 kostium &f%costume_name%&7!"
+  disabled: "&8» &7Ten &fkostium &7jest obecnie &#FB0808wyłączony&7!"
+  invalid-type: "&8» &#FB0808Nieprawidłowy &7typ &fkostiumu&7!"
+  invalid-type-item:
+    chat: "&8» &7Nie można &#FB0808rozpoznać &7typu &fkostiumu&7!"
+    actionbar: "&7Nie można &#FB0808rozpoznać &7typu &fkostiumu&7!"
+  expired:
+    chat: "&8» &7Twój kostium &f%costume_name% &c&#FB0808wygasł&7!"
+    subtitle: "&7Kostium &f%costume_name% &7został &#FB0808usunięty&7!"
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+    actionbar: "&7Kostium &f%costume_name% &7&#FB0808wygasł&7!"
+  expired-item:
+    chat: "&8» &7Ten kostium &#FB0808wygasł &7i nie może być aktywowany!"
+    subtitle: "&7Ten &fkostium &7już nie jest &#FB0808ważny&7!"
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+    actionbar: "&7Kostium &#FB0808wygasł &7i nie może być &faktywowany&7!"
+  cooldown: "&8» &#FB0808Musisz poczekać &7zanim użyjesz tej funkcji ponownie!"
+  config-updated: "&8» &7Konfiguracja kostiumu została &#08FB0Dzaktualizowana&7."
+  inventory-full: "&8» &7Twój ekwipunek jest &#FB0808pełny&7! Przedmiot kostiumu &f%costume_type% &7został upuszczony na ziemię."
+  received-item: "&8» &fOtrzymano &7przedmiot kostiumu &#08FB0D%costume_type%&7!"
+  removed-disabled: "&8» &7Twój kostium został &#FB0808usunięty&7, ponieważ został wyłączony w konfiguracji."
+
+  zabojczy-krolik:
+    name: "Zabójczego Królika"
+    double-jump-used: "&aAktywowano &2podwójny skok&a!"
+    double-jump-cooldown: "&cPodwójny skok będzie dostępny za &e%time%&c sekund!"
+  kostium-walentynkowy:
+    name: "Walentynkowy"
+    title-activated: "&7Kostium &dWalentynkowy &7aktywowany!"
+  
+  kostium-przeciwzakazeniowy:
+    name: "Przeciwzakażeniowy"
+    infection-success: "&aZaraziłeś gracza &e%player%&a! Będzie otrzymywał większe obrażenia przez %duration% sekund!"
+    infection-received: "&cZostałeś zarażony! Będziesz otrzymywał większe obrażenia przez %duration% sekund!"
+    infection-cooldown: "&cMusisz poczekać &e%time%&c sekund przed ponownym użyciem zarażenia!"
+  
+  kostium-maly-urwis:
+    name: "Małego Urwisa"
+    costume-equipped: "&7Pomyślnie &fzałożyłeś&7 kostium &fmałego urwisa&7!"
+    costume-removed: "&7Pomyślnie &fzdjąłeś&7 kostium &fmałego urwisa&7!"
+    money-steal: "&aUkradłeś &e%amount%$ &agraczowi &e%player%&a!"
+    money-steal-target: "&cGracz &e%killer% &cukradł ci &e%amount%$&c!"
+  
+  wampir:
+    name: "Wampira"
+    costume-equipped: "&7Pomyślnie &fzałożyłeś&7 kostium &cwampira&7!"
+    costume-removed: "&7Pomyślnie &fzdjąłeś&7 kostium &cwampira&7!"
+    vampire-kiss-activated: "&cPocałunek wampira &7aktywowany! Regenerujesz &e7% &7zadanych obrażeń!"
+    vampirism-activated: "&cVampiryzm &7aktywowany! Regenerujesz &e150% &7zadanych obrażeń!"
+    shulker-opened: "&bShulker &7otworzony w powietrzu!"
+  
+  mim:
+    name: "Mima"
+    costume-equipped: "&7Pomyślnie &fzałożyłeś&7 kostium &fmima&7!"
+    costume-removed: "&7Pomyślnie &fzdjąłeś&7 kostium &fmima&7!"
+  
+  extension:
+    success:
+      chat: "&8» &7Pomyślnie przedłużyłeś kostium o &f1 dzień&7! Zapłacono &#18FF00%cost%$"
+      title: "&#18FF00Pomyślnie&7 przedłużono &f1 dzień&7!"
+      fade-in: 10
+      stay: 30
+      fade-out: 15
+    insufficient-funds: "&8» &7Nie masz wystarczająco pieniędzy! Potrzebujesz &#FF0000%cost%$&7, a posiadasz &f%balance%$"
+    system-disabled: "&8» &7System przedłużania kostiumów jest &fwyłączony&7!"
+    vault-required: "&8» &7System przedłużania kostiumów wymaga pluginu &fVault&7!"
+
+heart:
+  default-item-name: "&cPrzykładowe serce"
+  default-item-lore:
+    - "&7"
+    - "&8 » &7Jest to przykładowe serce,"
+    - "&8 » &7aby je zmienić, weź do ręki"
+    - "&8 » &7przedmiot, który chcesz ustawić"
+    - "&8 » &7i wpisz &f/stormszafka heart set&7."
+    - "&7"
+
+  set-success: "&aPomyślnie ustawiono serce peta!"
+  set-error: "&cMusisz trzymać przedmiot w ręce!"
+  give-success: "&aDano %amount% serc graczowi %player%!"
+  give-received: "&aOtrzymałeś %amount% serc peta!"
+  give-error-player: "&cGracz nie jest online!"
+  give-error-amount: "&cIlość musi być większa od 0!"
+
+config:
+  pet-enabled: "&aPet %pet_type% został włączony!"
+  pet-disabled: "&cPet %pet_type% został wyłączony!"
+  pet-list: "&7Dostępne pety: &f%pet_list%"
+  pet-status: "&7Status peta %pet_type%: %status%"
+  enabled: "&aWłączony"
+  disabled: "&cWyłączony"
+
+reload:
+  chat: "&8» &fPlugin &7został &#08FB0Dpomyślnie &7przeładowany &8(%time%ms)&7!"
+  title: "&#08FB0D&lPRZEŁADOWANO"
+  subtitle: "&7Plugin przeładowany w &f%time%ms"
+  actionbar: "&#08FB0DPlugin przeładowany pomyślnie!"
+  fade-in: 10
+  stay: 50
+  fade-out: 10
+

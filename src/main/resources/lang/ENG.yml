@@ -1,0 +1,211 @@
+# English language file for STORMSZAFKA plugin
+# Version 2.0
+#
+# NOTE: Each message can be:
+# 1. Simple text (backward compatibility):
+#    message: "&aThis is a simple message"
+#
+# 2. Complex message with chat/title/subtitle/actionbar:
+#    message:
+#      chat: "&aChat message"
+#      title: "&6Title"
+#      subtitle: "&7Subtitle"
+#      fade-in: 10
+#      stay: 70
+#      fade-out: 20
+#      actionbar: "&eActionbar"
+#
+# All fields are optional - use only what you need!
+
+general:
+  prefix: "&8[&bSTORMSZAFKA&8] &7"
+  no-permission: "&cYou don't have permission to use this command!"
+  player-only: "&cThis command can only be used by a player!"
+  reload-success: "&aPlugin configuration has been reloaded!"
+  unknown-command: "&cUnknown command! Use &7/stormszafka help &cto see available commands."
+
+pet:
+  already-active: "&8» &cYou already have an active pet!"
+  already-active-item:
+    chat: "&8» &7You already have an active &#FB0808pet&7! Remove it first using the &#08FB0D/szafka&7 command!"
+    actionbar: "&7You already have an active &#FB0808pet&7!"
+  not-active: "&8» &cYou don't have an active pet!"
+  activated:
+    chat: "&8» &7Successfully &fequipped&7 the &#08FB0D%pet_name%&7 pet! To remove it, use the &n/szafka&7 command!"
+    title: "&#08FB0D&lᴘ&#0BF50D&lᴇ&#0EEF0D&lᴛ &#11E90D&lᴇ&#14E30D&lǫ&#17DD0D&lᴜ&#1AD70D&lɪ&#1DD10D&lᴘ&#20CB0D&lᴘ&#23C50D&lᴇ&#26BF0D&lᴅ"
+    subtitle: "&7Pet &#08FB0D%pet_name% &7has been &fequipped&7!"
+    fade-in: 10
+    stay: 50
+    fade-out: 10
+    actionbar: "&7Successfully &fequipped&7 the &#08FB0D%pet_name%&7 pet!"
+  activation-failed:
+    chat: "&8» &#FB0808Failed &7to activate pet!"
+    actionbar: "&#FB0808Failed &7to activate pet!"
+  removed:
+    chat: "&8» &7Successfully &fremoved&7 the &#08FB0D%pet_name%&7 pet!"
+    title: "&#FB0808&lᴘ&#F50808&lᴇ&#EF0808&lᴛ &#E90808&lʀ&#E30808&lᴇ&#DD0808&lᴍ&#D70808&lᴏ&#D10808&lᴠ&#CB0808&lᴇ&#C50808&lᴅ"
+    subtitle: "&7Pet &#08FB0D%pet_name% &7has been &fremoved&7!"
+    fade-in: 10
+    stay: 50
+    fade-out: 10
+    actionbar: "&7Successfully &fremoved&7 the &#08FB0D%pet_name%&7 pet!"
+  disabled: "&8» &7This pet is currently &#FB0808disabled&7!"
+  disabled-item:
+    chat: "&8» &7Pet &#FB0808%pet_type% &7is currently &#FB0808disabled&7!"
+    actionbar: "&7Pet &#FB0808%pet_type% &7is &#FB0808disabled&7!"
+  invalid-type: "&8» &#FB0808Invalid &7pet type!"
+  invalid-type-item:
+    chat: "&8» &7Cannot &#FB0808recognize &7pet type!"
+    actionbar: "&7Cannot &#FB0808recognize &7pet type!"
+  expired: "&8» &7Your pet &#FB0808%pet% &7has expired!"
+  expired-item:
+    chat: "&8» &7This pet has &#FB0808expired &7and cannot be activated!"
+    title: "&c&lPET EXPIRED"
+    subtitle: "&7This pet is no longer valid"
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+    actionbar: "&7Pet has &#FB0808expired &7and cannot be activated!"
+  visibility:
+    hidden: "&8» &7Your &fpet&7 is now &#FB0808invisible&7!"
+    visible: "&8» &7Your &fpet&7 is now &#08FB0Dvisible&7!"
+  cooldown: "&8» &#FB0808You need to wait &7before using this function again!"
+  plugin-disabled: "&8» &7Removed pet due to &#FB0808plugin shutdown&7."
+  config-updated: "&8» &7Pet configuration has been &#08FB0Dupdated&7."
+  inventory-full: "&8» &7Your inventory is &#FB0808full&7! The &#08FB0D%pet_type% &7pet item was dropped on the ground."
+  received-item: "&8» &#08FB0DReceived &7pet item &#08FB0D%pet_type%&7!"
+  removed-disabled: "&8» &7Your pet was &#FB0808removed &7because it was disabled in the configuration."
+  extension:
+    success:
+      chat: "&8» &7Successfully extended your pet by &f1 day&7 hearts! Paid &#18FF00%cost% hearts"
+      title: "&#18FF00Successfully&7 extended &f1 day&7!"
+      fade-in: 10
+      stay: 30
+      fade-out: 15
+    insufficient-fragments: "&8» &7You don't have enough &fhearts&7! You need &#FF0000%cost% hearts&7, but you have &f%balance% hearts"
+
+costume:
+  already-active: "&8» &cYou already have an active costume!"
+  already-active-item:
+    chat: "&8» &7You already have an active &#FB0808costume&7! Remove it first using the &#08FB0D/szafka&7 command!"
+    actionbar: "&7You already have an active &#FB0808costume&7!"
+  not-active: "&8» &cYou don't have an active costume!"
+  activated:
+    chat: "&8» &7Successfully &fequipped&7 the &#08FB0D%costume_name%&7 costume!"
+    title: "&#08FB0D&lᴄ&#0BF50D&lᴏ&#0EEF0D&lꜱ&#11E90D&lᴛ&#14E30D&lᴜ&#17DD0D&lᴍ&#1AD70D&lᴇ &#1DD10D&lᴇ&#20CB0D&lǫ&#23C50D&lᴜ&#26BF0D&lɪ&#29B90D&lᴘ&#2CB30D&lᴘ&#2FAD0D&lᴇ&#32A70D&lᴅ"
+    subtitle: "&7Costume &#08FB0D%costume_name% &7has been &fequipped&7!"
+    fade-in: 10
+    stay: 50
+    fade-out: 10
+    actionbar: "&7Successfully &fequipped&7 the &#08FB0D%costume_name%&7 costume!"
+  activation-failed:
+    chat: "&8» &#FB0808Failed &7to activate costume!"
+    actionbar: "&#FB0808Failed &7to activate costume!"
+  removed:
+    chat: "&8» &7Successfully &fremoved&7 the &#08FB0D%costume_name%&7 costume!"
+    title: "&#FB0808&lᴄ&#F50808&lᴏ&#EF0808&lꜱ&#E90808&lᴛ&#E30808&lᴜ&#DD0808&lᴍ&#D70808&lᴇ &#D10808&lʀ&#CB0808&lᴇ&#C50808&lᴍ&#BF0808&lᴏ&#B90808&lᴠ&#B30808&lᴇ&#AD0808&lᴅ"
+    subtitle: "&7Costume &#08FB0D%costume_name% &7has been &fremoved&7!"
+    fade-in: 10
+    stay: 50
+    fade-out: 10
+    actionbar: "&7Successfully &fremoved&7 the &#08FB0D%costume_name%&7 costume!"
+  disabled: "&8» &7This costume is currently &#FB0808disabled&7!"
+  invalid-type: "&8» &#FB0808Invalid &7costume type!"
+  invalid-type-item:
+    chat: "&8» &7Cannot &#FB0808recognize &7costume type!"
+    actionbar: "&7Cannot &#FB0808recognize &7costume type!"
+  expired-item:
+    chat: "&8» &7This costume has &#FB0808expired &7and cannot be activated!"
+    title: "&c&lCOSTUME EXPIRED"
+    subtitle: "&7This costume is no longer valid"
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+    actionbar: "&7Costume has &#FB0808expired &7and cannot be activated!"
+  cooldown: "&8» &#FB0808You need to wait &7before using this function again!"
+  config-updated: "&8» &7Costume configuration has been &#08FB0Dupdated&7."
+  inventory-full: "&8» &7Your inventory is &#FB0808full&7! The &#08FB0D%costume_type% &7costume item was dropped on the ground."
+  received-item: "&8» &#08FB0DReceived &7costume item &#08FB0D%costume_type%&7!"
+  removed-disabled: "&8» &7Your costume was &#FB0808removed &7because it was disabled in the configuration."
+  zabojczy-krolik:
+    name: "Killer Rabbit"
+    title-activated: "&7Killer Rabbit &fcostume &7activated!"
+    double-jump-used: "&aActivated &2double jump&a!"
+    double-jump-cooldown: "&cDouble jump will be available in &e%time%&c seconds!"
+  kostium-walentynkowy:
+    name: "Valentine"
+    title-activated: "&7Valentine &dcostume &7activated!"
+  
+  kostium-przeciwzakazeniowy:
+    name: "Anti-Infection"
+    title-activated: "&7Anti-Infection &acostume &7activated!"
+    infection-success: "&aYou infected player &e%player%&a! They will take more damage for %duration% seconds!"
+    infection-received: "&cYou have been infected! You will take more damage for %duration% seconds!"
+  
+  kostium-maly-urwis:
+    name: "Little Rascal"
+    title-activated: "&7Little Rascal &fcostume &7activated!"
+    costume-equipped: "&7Successfully &fequipped&7 the &flittle rascal&7 costume!"
+    costume-removed: "&7Successfully &fremoved&7 the &flittle rascal&7 costume!"
+    show-original: "&7Showing original armor."
+    show-costume: "&7Showing costume."
+    full-costume-restored: "&7Full costume has been restored."
+    money-steal: "&aYou stole &e%amount%$ &afrom player &e%player%&a!"
+    money-steal-target: "&cPlayer &e%killer% &cstole &e%amount%$ &cfrom you!"
+  
+  wampir:
+    name: "Vampire"
+    costume-equipped: "&7Successfully &fequipped&7 the &cvampire&7 costume!"
+    costume-removed: "&7Successfully &fremoved&7 the &cvampire&7 costume!"
+    vampire-kiss-activated: "&cVampire Kiss &7activated! You regenerate &e7% &7of damage dealt!"
+    vampirism-activated: "&cVampirism &7activated! You regenerate &e150% &7of damage dealt!"
+    shulker-opened: "&bShulker &7opened in the air!"
+  
+  mim:
+    name: "Mime"
+    costume-equipped: "&7Successfully &fequipped&7 the &fmime&7 costume!"
+    costume-removed: "&7Successfully &fremoved&7 the &fmime&7 costume!"
+  
+  extension:
+    success:
+      chat: "&8» &7Successfully extended your costume by &f1 day&7! Paid &#18FF00%cost%$"
+      title: "&#18FF00Successfully&7 extended &f1 day&7!"
+      fade-in: 10
+      stay: 30
+      fade-out: 15
+    insufficient-funds: "&8» &7You don't have enough money! You need &#FF0000%cost%$&7, but you have &f%balance%$"
+    system-disabled: "&8» &7Costume extension system is &fdisabled&7!"
+    vault-required: "&8» &7Costume extension system requires &fVault&7 plugin!"
+heart:
+  default-item-name: "&cExample Heart"
+  default-item-lore:
+    - "&7"
+    - "&8 » &7This is an example heart,"
+    - "&8 » &7to change it, hold in your hand"
+    - "&8 » &7the item you want to set"
+    - "&8 » &7and type &f/stormszafka heart set&7."
+    - "&7"
+  set-success: "&aSuccessfully set pet heart!"
+  set-error: "&cYou must hold an item in your hand!"
+  give-success: "&aGave %amount% hearts to %player%!"
+  give-received: "&aYou received %amount% pet hearts!"
+  give-error-player: "&cPlayer is not online!"
+  give-error-amount: "&cAmount must be greater than 0!"
+
+config:
+  pet-enabled: "&aPet %pet_type% has been enabled!"
+  pet-disabled: "&cPet %pet_type% has been disabled!"
+  pet-list: "&7Available pets: &f%pet_list%"
+  pet-status: "&7Pet %pet_type% status: %status%"
+  enabled: "&aEnabled"
+  disabled: "&cDisabled"
+
+reload:
+  chat: "&8» &fPlugin &7has been &#08FB0Dsuccessfully &7reloaded &8(%time%ms)&7!"
+  title: "&#08FB0D&lRELOADED"
+  subtitle: "&7Plugin reloaded in &f%time%ms"
+  actionbar: "&#08FB0DPlugin reloaded successfully!"
+  fade-in: 10
+  stay: 50
+  fade-out: 10
+

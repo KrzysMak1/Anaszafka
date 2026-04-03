@@ -206,7 +206,7 @@ public class UtilsListener1 implements Listener
                 break;
             }
             case "rozdymek": {
-                itemStack = pl.ziffy.STORMSZAFKA.pets.PetsPetService4._(s);
+                itemStack = pl.ziffy.STORMSZAFKA.pets.PetsPetService4._tmp(s);
                 break;
             }
             case "pajak": {

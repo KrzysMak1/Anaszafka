@@ -1,0 +1,84 @@
+# Konfiguracja Kostiumu Pirata
+
+# Przedmiot aktywacyjny (ten który gracz dostaje do ekwipunku)
+activation_item:
+  material: LEATHER_CHESTPLATE
+  display_name: "&7Kostium &6pirata &7na czas &3{time}"
+  preview_display_name: "&7Kostium &6pirata"
+  lore:
+    - "&8Unikatowa wersja!"
+    - "&7Został on wydany w trakcie &fwydarzenia"
+    - "&fpirackiego 2025&7."
+    - "&7"
+    - "&7dzięki temu przedmiotowi otrzymasz"
+    - "&funikatowy &7wygląd oraz &fepickie &7bonusy"
+    - "&7"
+    - "&7Lista bonusów:"
+    - "&8 » &7Podwójna &ckradzież serc &7po zabiciu gracza"
+    - "&8 » &3-5% &7obrony"
+    - "&8 » &7Po zabiciu gracza kradniesz mu &e3% &7majątku"
+    - "&8 » &c13% &7dodatkowych obrażeń"
+  custom_model_data: 0
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+  leather_color: "101,67,33"  # Brązowy
+
+# Wygląd zbroi na graczu
+armor_appearance:
+  display_name: "&7Zbroja &6Pirata"
+  base_lore:
+    - "&7"
+    - "&e&lKliknij&r &7aby przełączyć całą &fzbroję&7!"
+  
+  # Kolory poszczególnych części zbroi (R,G,B)
+  armor_colors:
+    chestplate: "101,67,33"  # Brązowy
+    leggings: "101,67,33"    # Brązowy
+    boots: "101,67,33"       # Brązowy
+  
+  # Tekstura głowy (player head)
+  helmet:
+    primary_texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2E1MTMzYzFlNDAwODQyNWFkYjE0NTBlYjhmNmU4YjZhNGRiNDY1OTI1OWRmMjNlYWQ3ODc0MjU2ZjhjYmM0NyJ9fX0="
+  
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+
+# Efekty kostiumu
+effects:
+  # Dodatkowe obrażenia
+  extra_damage:
+    enabled: true
+    multiplier: 1.13  # +13% obrażeń
+  
+  # Zmniejszona obrona (gracz otrzymuje więcej obrażeń)
+  reduced_defense:
+    enabled: true
+    multiplier: 1.05  # +5% otrzymywanych obrażeń (mniej obrony)
+  
+  # Kradzież majątku po zabiciu gracza
+  money_steal:
+    enabled: true
+    percentage: 3.0  # 3% majątku
+    requires_vault: true
+  
+  # Podwójna kradzież serc
+  heart_steal:
+    enabled: true
+    multiplier: 2.0  # Podwójna kradzież
+  
+  # Dźwięki
+  sounds:
+    equip: ITEM_ARMOR_EQUIP_LEATHER
+    equip_volume: 1.0
+    equip_pitch: 1.0
+
+# Przedłużanie kostiumu
+extension:
+  enabled: true
+  cost_per_day: 5000  # Koszt w walucie serwerowej za 1 dzień przedłużenia

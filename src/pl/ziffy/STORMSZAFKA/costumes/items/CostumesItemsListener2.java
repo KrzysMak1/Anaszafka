@@ -74,7 +74,7 @@ public class CostumesItemsListener2 extends J implements Listener
     private List<String> r;
     private int Z;
     private boolean u;
-    private List<String> _;
+    private List<String> _tmp;
     private Color X;
     private String M;
     private List<String> n;
@@ -175,7 +175,7 @@ public class CostumesItemsListener2 extends J implements Listener
         this.r = (List)this.g.getStringList("activation_item.lore").stream().map(this::CostumesItemsListener4).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
         this.Z = this.g.getInt("activation_item.custom_model_data", 0);
         this.u = this.g.getBoolean("activation_item.unbreakable", true);
-        this._ = this.g.getStringList("activation_item.item_flags");
+        this._tmp = this.g.getStringList("activation_item.item_flags");
         this.X = this.CostumesItemsListener2(this.g.getString("activation_item.leather_color", "0,0,0"));
         this.M = this.CostumesItemsListener4(this.g.getString("armor_appearance.display_name", "&7Zbroja &5Mima"));
         this.n = (List)this.g.getStringList("armor_appearance.base_lore").stream().map(this::CostumesItemsListener4).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
@@ -218,7 +218,7 @@ public class CostumesItemsListener2 extends J implements Listener
         this.r = new ArrayList<String>(List.of("§8Unikatowa wersja!"));
         this.Z = 0;
         this.u = true;
-        this._ = new ArrayList<String>(List.of("HIDE_ATTRIBUTES", "HIDE_UNBREAKABLE", "HIDE_DYE"));
+        this._tmp = new ArrayList<String>(List.of("HIDE_ATTRIBUTES", "HIDE_UNBREAKABLE", "HIDE_DYE"));
         this.X = Color.fromRGB(0, 0, 0);
         this.M = "§7Zbroja §5Mima";
         this.n = new ArrayList<String>(List.of("§7", "§e§lKliknij§r §7aby prze\u0142\u0105czy\u0107 ca\u0142\u0105 §fzbroj\u0119§7!"));
@@ -407,7 +407,7 @@ public class CostumesItemsListener2 extends J implements Listener
                 itemMeta.setCustomModelData(Integer.valueOf(this.Z));
             }
             itemMeta.setUnbreakable(this.u);
-            for (final String s : this._) {
+            for (final String s : this._tmp) {
                 try {
                     itemMeta.addItemFlags(new ItemFlag[] { ItemFlag.valueOf(s) });
                 }
@@ -431,7 +431,7 @@ public class CostumesItemsListener2 extends J implements Listener
                 itemMeta.setCustomModelData(Integer.valueOf(this.Z));
             }
             itemMeta.setUnbreakable(this.u);
-            for (final String s : this._) {
+            for (final String s : this._tmp) {
                 try {
                     itemMeta.addItemFlags(new ItemFlag[] { ItemFlag.valueOf(s) });
                 }

@@ -103,7 +103,7 @@ public class CostumesItemsListener8 extends J implements Listener
             this.Y();
         }
         this.\u01a1 = (FileConfiguration)YamlConfiguration.loadConfiguration(this.\u019a);
-        this._();
+        this._tmp();
     }
     
     private void Y() {
@@ -191,7 +191,7 @@ public class CostumesItemsListener8 extends J implements Listener
         }
     }
     
-    private void _() {
+    private void _tmp() {
         this.\u0191 = this.\u01a1.getDouble("effects.extra_damage.multiplier", 1.1) - 1.0;
         this.\u019d = this.\u01a1.getDouble("effects.fall_damage_reduction.reduction", 0.5);
         this.\u018b = this.\u01a1.getDouble("effects.money_steal.percentage", 3.0);

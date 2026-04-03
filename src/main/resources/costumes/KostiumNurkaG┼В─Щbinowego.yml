@@ -1,0 +1,87 @@
+# Konfiguracja Kostiumu Nurka Głębinowego
+
+# Przedmiot aktywacyjny (ten który gracz dostaje do ekwipunku)
+activation_item:
+  material: LEATHER_CHESTPLATE
+  display_name: "&7Kostium &bnurka głębinowego &7na czas &3{time}"
+  preview_display_name: "&7Kostium &bnurka głębinowego"
+  lore:
+    - "&8Unikatowa wersja!"
+    - "&7Został on wydany w trakcie &fwydarzenia"
+    - "&fwakacyjnego 2025&7."
+    - "&7"
+    - "&7dzięki temu przedmiotowi otrzymasz"
+    - "&funikatowy &7wygląd oraz &fepickie &7bonusy"
+    - "&7"
+    - "&7Lista bonusów:"
+    - "&8 » &7Po wejściu do wody otrzymujesz"
+    - "&7 co jakiś czas &bgracje delfina"
+    - "&8 » &3+30% &7obrażeń w wodzie"
+    - "&8 » &7Stały efekt &bszybkości biegania 2"
+    - "&8 » &4+4 &7serca"
+  custom_model_data: 0
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+  leather_color: "0,100,100"  # Ciemnozielony (dark cyan)
+
+# Wygląd zbroi na graczu
+armor_appearance:
+  display_name: "&7Zbroja &bNurka Głębinowego"
+  base_lore:
+    - "&7"
+    - "&e&lKliknij&r &7aby przełączyć całą &fzbroję&7!"
+  
+  # Kolory poszczególnych części zbroi (R,G,B)
+  armor_colors:
+    chestplate: "0,100,100"  # Ciemnozielony
+    leggings: "0,100,100"    # Ciemnozielony
+    boots: "0,100,100"        # Ciemnozielony
+  
+  # Tekstura głowy (player head)
+  helmet:
+    primary_texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc2OTgxN2MzMmVjNGIwZDNiM2NkYzUwOGE0ZDZjOGExOTFhMjUyMzA2MzRkMWYwMGU1N2E3NzRkNGNiODhhOCJ9fX0="
+  
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+
+# Efekty kostiumu
+effects:
+  # Gracja delfina w wodzie
+  dolphins_grace:
+    enabled: true
+    duration: 200  # 10 sekund (200 ticków)
+    amplifier: 0   # Poziom 1
+    check_interval_min: 600  # Minimum 30 sekund między aplikacjami (600 ticków)
+    check_interval_max: 1200  # Maximum 60 sekund między aplikacjami (1200 ticków)
+  
+  # Dodatkowe obrażenia w wodzie
+  water_damage_boost:
+    enabled: true
+    multiplier: 1.30  # +30% obrażeń (z 2 serc na ~2.6 serca)
+  
+  # Stała szybkość biegania
+  speed:
+    enabled: true
+    amplifier: 1  # Poziom 2 (0 = poziom 1, 1 = poziom 2)
+  
+  # Dodatkowe serca
+  extra_hearts:
+    enabled: true
+    hearts: 4  # +4 serca (8 HP)
+  
+  # Dźwięki
+  sounds:
+    equip: ITEM_ARMOR_EQUIP_LEATHER
+    equip_volume: 1.0
+    equip_pitch: 1.0
+
+# Przedłużanie kostiumu
+extension:
+  enabled: true
+  cost_per_day: 5000  # Koszt w walucie serwerowej za 1 dzień przedłużenia

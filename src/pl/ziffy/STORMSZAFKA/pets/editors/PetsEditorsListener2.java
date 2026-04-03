@@ -213,7 +213,7 @@ public class PetsEditorsListener2 implements Listener
             });
         }
         else if (s.startsWith("edit_")) {
-            final int int1 = Integer.parseInt(s.split("_")[1]);
+            final int int1 = Integer.parseInt(s.split("_tmp")[1]);
             final List<String> c2 = PetsEditorsPetEditorController2(s2);
             if (int1 >= c2.size()) {
                 return;
