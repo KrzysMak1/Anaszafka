@@ -1,0 +1,86 @@
+# ========= CostumeMenuConfig.yml =========
+# Configuration for the Costume Preview Menu / Konfiguracja dla Menu Podglądu Kostiumów
+# =========================================
+
+# GUI title (supports color codes with &) / Tytuł GUI (obsługuje kody kolorów z &)
+gui:
+  title: "&8Lista kostiumów"
+  size: 54 # Must be a multiple of 9 (9, 18, 27, 36, 45, 54) / Musi być wielokrotnością 9 (9, 18, 27, 36, 45, 54)
+
+# Items configuration / Konfiguracja przedmiotów
+items:
+  # Return button / Przycisk powrotu
+  return:
+    slot: 49
+    material: ARROW
+    name: "&cPowrót"
+    lore: []
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+# Decorative blocks / Bloki dekoracyjne
+decorations:
+  enabled: false
+  items:
+    border:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore: []
+      glow: false
+      model_data: 0
+      flags:
+        - HIDE_ATTRIBUTES
+        - HIDE_ENCHANTS
+        - HIDE_UNBREAKABLE
+        - HIDE_POTION_EFFECTS
+      slots:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 17
+        - 18
+        - 26
+        - 27
+        - 35
+        - 36
+        - 44
+        - 45
+        - 46
+        - 47
+        - 48
+        - 50
+        - 52
+        - 53
+
+# Preview configuration / Konfiguracja podglądu
+preview:
+  # Show disabled costumes in preview / Pokaż wyłączone kostiumy w podglądzie
+  show_disabled_costumes: true
+  
+  costume_display:
+    # Custom slots for specific costume types / Niestandardowe sloty dla konkretnych typów kostiumów
+    custom_slots:
+      zabojczykrolik: 22
+      walentynkowy: 20
+      przeciwzakazeniowy: 21
+      malyurwis: 23
+      pirata: 24
+      nurekglebinowy: 30
+      wampir: 32
+      mima: 31
+    
+    # Show "costume unavailable" message for disabled costumes / Pokaż wiadomość "kostium niedostępny" dla wyłączonych kostiumów
+    show_unavailable_message: true
+    unavailable_message: "&cKostium niedostępny"

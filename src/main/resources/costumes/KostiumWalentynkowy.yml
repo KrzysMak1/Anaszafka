@@ -1,0 +1,87 @@
+# Konfiguracja Kostiumu Walentynkowego
+
+# Przedmiot aktywacyjny (ten który gracz dostaje do ekwipunku)
+activation_item:
+  material: LEATHER_CHESTPLATE
+  display_name: "&7Kostium &dwalentynkowy &7na czas &3{time}"
+  preview_display_name: "&7Kostium &dwalentynkowy"
+  lore:
+    - "&8Unikatowa wersja!"
+    - "&7Został on wydany jako pierwszy w historii serwerów"
+    - "&7w dniu &aWalentynek (2025)&7, aby uczcić miłość!"
+    - "&7"
+    - "&7Dzięki temu przedmiotowi otrzymasz"
+    - "&funikatowy &7wygląd oraz &fepickie &7bonusy."
+    - "&7"
+    - "&7Lista bonusów:"
+    - "&8 » &4+5 &7serc"
+    - "&8 » &c12% &7dodatkowych obrażeń"
+    - "&8 » &e100% &7odporności od upadku"
+    - "&8 » &b+5% &7obrony"
+  custom_model_data: 0
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+  leather_color: "255,105,180"  # Różowy walentynkowy
+
+# Wygląd zbroi na graczu
+armor_appearance:
+  display_name: "&7Zbroja &dWalentynkowa"
+  base_lore:
+    - "&7"
+    - "&e&lKliknij&r &7aby przełączyć całą &fzbroję&7!"
+  
+  # Kolory poszczególnych części zbroi (R,G,B)
+  armor_colors:
+    chestplate: "255,105,180"  # Różowy
+    leggings: "255,105,180"    # Różowy
+    boots: "255,105,180"       # Różowy
+  
+  # Tekstura głowy (player head)
+  helmet:
+    primary_texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmZhNWMyNmQ3ODIxYmEwNzgzZTQ3NzA1NTUzMTQxYjZkNDdmYjNkODQ4ODVhODUxZWYwNTM1YzRlM2FmYzY4OCJ9fX0="
+  
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+
+# Efekty kostiumu
+effects:
+  # Dodatkowe serca
+  extra_hearts:
+    enabled: true
+    hearts: 5  # +5 serc (10 HP)
+  
+  # Dodatkowe obrażenia
+  extra_damage:
+    enabled: true
+    multiplier: 1.12  # +12% obrażeń
+  
+  # Ochrona przed upadkiem
+  fall_damage_protection:
+    enabled: true
+    reduction: 1.0  # 100% redukcji (brak obrażeń)
+  
+  # Bonus do obrony
+  defense_bonus:
+    enabled: true
+    multiplier: 0.95  # -5% otrzymywanych obrażeń (więcej obrony)
+  
+  # Dźwięki
+  sounds:
+    equip: ENTITY_EXPERIENCE_ORB_PICKUP
+    equip_volume: 1.0
+    equip_pitch: 1.2
+    effect: ENTITY_PLAYER_LEVELUP
+    effect_volume: 0.8
+    effect_pitch: 1.5
+
+# Przedłużanie kostiumu
+extension:
+  enabled: true
+  cost_per_day: 5000  # Koszt w walucie serwerowej za 1 dzień przedłużenia
+

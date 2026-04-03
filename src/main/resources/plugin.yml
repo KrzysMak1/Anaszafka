@@ -1,0 +1,46 @@
+name: STORMSZAFKA
+version: '1.0'
+main: pl.ziffy.STORMSZAFKA.Main
+author: Komentarz
+api-version: 1.19
+supported-api-versions: [1.19, 1.20, 1.20.1, 1.20.2, 1.20.3, 1.20.4, 1.20.5, 1.21, 1.21.1, 1.21.2, 1.21.3, 1.21.4, 1.21.5, 1.21.6, 1.21.7, 1.21.8, 1.21.9, 1.21.10]
+description: Plugin STORMSZAFKA dodaje system kostiumów i petów z serwera Anarchia.GG.
+website: https://stormcode.tech/
+commands:
+  stormszafka:
+    aliases: [ sszafka, ssz ]
+    usage: /stormszafka [gui | give pet <nazwa> <czas> [gracz] | remove [gracz] | list | check [gracz]]
+  szafka:
+    aliases: [szafa, pet, pety, kostium, kostiumy]
+    usage: /szafka
+permissions:
+  stormszafka.use:
+    description: Pozwala na używanie podstawowych komend
+    default: true
+  stormszafka.give:
+    description: Pozwala na dawanie petów
+    default: op
+  stormszafka.give.self:
+    description: Pozwala na dawanie petów sobie
+    default: true
+  stormszafka.give.others:
+    description: Pozwala na dawanie petów innym graczom
+    default: op
+  stormszafka.remove.self:
+    description: Pozwala na usuwanie swoich petów
+    default: true
+  stormszafka.remove.others:
+    description: Pozwala na usuwanie petów innym graczom
+    default: op
+  stormszafka.list:
+    description: Pozwala na przeglądanie listy petów
+    default: true
+  stormszafka.check.self:
+    description: Pozwala na sprawdzanie swoich petów
+    default: true
+  stormszafka.check.others:
+    description: Pozwala na sprawdzanie petów innych graczy
+    default: op
+  stormszafka.admin:
+    description: Pozwala na zarządzanie konfiguracją petów
+    default: op

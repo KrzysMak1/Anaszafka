@@ -1,0 +1,240 @@
+# ========= MenuConfig.yml =========
+# Configuration for the main Pet Menu / Konfiguracja dla głównego Menu Petów
+# ================================
+
+# GUI title (supports color codes with &) / Tytuł GUI (obsługuje kody kolorów z &)
+gui:
+  title: "&8Szafka"
+  size: 45 # Must be a multiple of 9 (9, 18, 27, 36, 45, 54) / Musi być wielokrotnością 9 (9, 18, 27, 36, 45, 54)
+
+# Items configuration / Konfiguracja przedmiotów
+items:
+  # Pet display item (when active) / Przedmiot wyświetlania peta (gdy aktywny)
+  pet_display:
+    slot: 15
+
+  # No pet placeholder item / Przedmiot zastępczy braku peta
+  no_pet:
+    slot: 16
+    material: SKELETON_SKULL
+    name: "&cBrak peta"
+    lore: []
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+  # Remove pet button / Przycisk usuwania peta
+  remove_pet:
+    slot: 23
+    material: RED_DYE
+    name: "&cZdejmij peta"
+    lore: []
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+  # No pet info panel / Panel informacyjny braku peta
+  no_pet_info:
+    slot: 24
+    material: RED_STAINED_GLASS_PANE
+    name: "&cPeta możesz zdobyć poprzez zakup"
+    lore:
+      - "&4klucza&c w sklepie za czas lub"
+      - "&cna naszej stronie &4www.stormcode.tech&c."
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+  # Preview pets button / Przycisk podglądu petów
+  preview_pets:
+    slot: 44
+    material: EGG
+    name: "&6Pety"
+    lore:
+      - "&8 » &7W tym miejscu odnajdziesz pełną listę"
+      - "&8 » &7wszystkich dostępnych &ezwierząt"
+      - "&8 » &etowarzyszących&7 wraz z ich efektami"
+      - "&8 » &7dodatkowymi!"
+      - "&r"
+      - "&8 » &aKliknij &2LEWYM&a, aby przejść!"
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+  # Preview costumes button / Przycisk podglądu kostiumów
+  preview_costumes:
+    slot: 36
+    material: ARMOR_STAND
+    name: "&6Kostiumy"
+    lore:
+      - "&8 » &7W tym miejscu odnajdziesz pełną listę"
+      - "&8 » &7wszystkich dostępnych &ekostiumów"
+      - "&8 » &7wraz z ich efektami dodatkowymi!"
+      - "&7"
+      - "&8 » &aKliknij &2LEWYM&a, aby przejść!"
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+  # Close button / Przycisk zamknięcia
+  close:
+    slot: 40
+    material: BARRIER
+    name: "&cZamknij"
+    lore: []
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+  # Visibility button (when pet is visible) / Przycisk widoczności (gdy pet jest widoczny)
+  visibility_visible:
+    slot: 41
+    material: REDSTONE_TORCH
+    name: "&aWidoczność peta"
+    lore:
+      - "&r"
+      - " &8» &7Denerwuje ciebie twój zwierzak?"
+      - " &8» &7Jeżeli tak to wystarczy, że ukryjesz"
+      - " &8» &7go tą funckją!"
+      - "&r"
+      - "&8» &7Status: &awidoczny"
+      - "&8» &aKliknij, aby ukryć"
+    glow: true
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+  # Visibility button (when pet is hidden) / Przycisk widoczności (gdy pet jest ukryty)
+  visibility_hidden:
+    slot: 41
+    material: REDSTONE_TORCH
+    name: "&aWidoczność peta"
+    lore:
+      - "&r"
+      - " &8» &7Denerwuje ciebie twój zwierzak?"
+      - " &8» &7Jeżeli tak to wystarczy, że ukryjesz"
+      - " &8» &7go tą funckją!"
+      - "&r"
+      - "&8» &7Status: &cniewidoczny"
+      - "&8» &cKliknij, aby pokazać"
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+# Decorative blocks / Bloki dekoracyjne
+decorations:
+  # Example: Black glass panes around the border / Przykład: Czarne szklane panele wokół obramowania
+  border:
+    material: BLACK_STAINED_GLASS_PANE
+    name: " "
+    lore: []
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 37
+      - 38
+      - 39
+      - 42
+      - 43
+
+# Costume items configuration / Konfiguracja przedmiotów kostiumów
+costume_items:
+  # Costume display item (when active) / Przedmiot wyświetlania kostiumu (gdy aktywny)
+  costume_display:
+    slot: 11
+    # No item properties needed as the costume item is generated dynamically / Nie są potrzebne właściwości przedmiotu, ponieważ przedmiot kostiumu jest generowany dynamicznie
+
+  # No costume placeholder item / Przedmiot zastępczy braku kostiumu
+  no_costume:
+    slot: 12  # Changed from 11 to avoid conflict / Zmieniono z 11, aby uniknąć konfliktu
+    material: CHAINMAIL_CHESTPLATE
+    name: "&cBrak kostiumu"
+    lore: []
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+  # Remove costume button / Przycisk usuwania kostiumu
+  remove_costume:
+    slot: 20
+    material: RED_DYE
+    name: "&cZdejmij kostium"
+    lore: []
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS
+
+  # No costume info panel / Panel informacyjny braku kostiumu
+  no_costume_info:
+    slot: 21  # Changed from 20 to avoid conflict / Zmieniono z 20, aby uniknąć konfliktu
+    material: RED_STAINED_GLASS_PANE
+    name: "&cKostium możesz zdobyć poprzez zakup"
+    lore:
+      - "&4klucza&c w sklepie za czas lub"
+      - "&cna naszej stronie &4www.stormcode.tech&c."
+    glow: false
+    model_data: 0
+    flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_POTION_EFFECTS

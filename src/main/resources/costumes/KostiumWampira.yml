@@ -1,0 +1,96 @@
+# Konfiguracja Kostiumu Wampira
+
+# Przedmiot aktywacyjny (ten który gracz dostaje do ekwipunku)
+activation_item:
+  material: LEATHER_CHESTPLATE
+  display_name: "&7Kostium &cwampira &7na czas &3{time}"
+  preview_display_name: "&7Kostium &cwampira"
+  lore:
+    - "&8Unikatowa wersja!"
+    - "&7Został on wydany w trakcie &fwydarzenia"
+    - "&fz okazji dnia dziecka 2025&7."
+    - "&7"
+    - "&7Dzięki temu przedmiotowi otrzymasz"
+    - "&funikatowy &7wygląd oraz &fepickie &7bonusy."
+    - "&7"
+    - "&7Lista bonusów:"
+    - "&8 » &7Otrzymujesz otwieranie &bshulkerów &7w każdym miejscu!"
+    - "&8 » &c10% &7dodatkowych obrażeń"
+    - "&8 » &cPocałunek wampira &7leczy &e7% &7zadanych obrażeń"
+    - "&8 » &7Regeneracja &c150% &7z zadanego damage"
+    - "&8 » &4+4 &7serca"
+  custom_model_data: 0
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_ENCHANTS
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+  leather_color: "197,115,102"  # Brązowy
+
+# Wygląd zbroi na graczu
+armor_appearance:
+  display_name: "&7Zbroja &cwampira"
+  base_lore:
+    - "&7"
+    - "&e&lKliknij&r &7aby przełączyć całą &fzbroję&7!"
+  
+  # Kolory poszczególnych części zbroi (R,G,B)
+  armor_colors:
+    chestplate: "197,115,102"  # Brązowy
+    leggings: "197,115,102"    # Brązowy
+    boots: "197,115,102"       # Brązowy
+  
+  # Tekstura głowy (player head)
+  helmet:
+    primary_texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTNkMzg1MTIxMjI4MGU3Mzk2NjhkMDZhYjQ0NTM1ODFlZWVmNzlhNjNhZWZhNjA5YzJkNTgxOGI4MzJlM2RlZSJ9fX0="
+  
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_ENCHANTS
+    - HIDE_UNBREAKABLE
+
+# Efekty kostiumu
+effects:
+  # Bonus zdrowia
+  health_bonus:
+    enabled: true
+    amount: 8
+  
+  # Bonus obrażeń
+  damage_bonus:
+    enabled: true
+    amount: 10
+  
+  # Pocałunek wampira - regeneracja z zadanego damage
+  vampire_kiss:
+    enabled: true
+    chance: 30
+    heal_percentage: 7
+    cooldown: 20
+  
+  # Vampiryzm - regeneracja z zadanego damage
+  vampirism:
+    enabled: true
+    percentage: 150
+    chance: 100
+    cooldown: 20
+  
+  # Otwieranie shulkerów w powietrzu
+  shulker_opening:
+    enabled: true
+  
+  # Dźwięki
+  sounds:
+    equip: ENTITY_EXPERIENCE_ORB_PICKUP
+    equip_volume: 1.0
+    equip_pitch: 1.0
+    vampire_kiss: ENTITY_PLAYER_LEVELUP
+    vampire_kiss_volume: 0.8
+    vampire_kiss_pitch: 1.5
+
+# Przedłużanie kostiumu
+extension:
+  enabled: true
+  cost_per_day: 5000  # Koszt w walucie serwerowej za 1 dzień przedłużenia

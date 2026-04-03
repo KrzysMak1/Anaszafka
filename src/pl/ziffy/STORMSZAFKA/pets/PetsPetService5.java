@@ -56,7 +56,7 @@ public class PetsPetService5
     
     static {
         (PetsPetService1 = new HashMap<String, Class<? extends PetsPetService3>>()).put("pedziwiatr", PetsPetService1.class);
-        PetsPetService5.PetsPetService1.put("aniolek", _.class);
+        PetsPetService5.PetsPetService1.put("aniolek", _tmp.class);
         PetsPetService5.PetsPetService1.put("pancernik", O.class);
         PetsPetService5.PetsPetService1.put("pudzianek", U.class);
         PetsPetService5.PetsPetService1.put("glodomorek", pl.ziffy.STORMSZAFKA.pets.items.PetsPetService3.class);

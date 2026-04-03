@@ -1,0 +1,186 @@
+# General settings / Ustawienia ogólne
+settings:
+  # Enable or disable bStats metrics collection / Włącz lub wyłącz zbieranie metryk bStats
+  # bStats collects anonymous usage data to help improve the plugin / bStats zbiera anonimowe dane użytkowania, aby pomóc w ulepszaniu wtyczki
+  # Learn more at https://bstats.org/ / Dowiedz się więcej na https://bstats.org/
+  bStats: true
+  
+  # Enable or disable update checking / Włącz lub wyłącz sprawdzanie aktualizacji
+  # When enabled, the plugin will check for new versions on SpigotMC / Gdy włączone, plugin będzie sprawdzał nowe wersje na SpigotMC
+  check-updates: true
+  
+  # Language settings / Ustawienia języka
+  # Available languages: POL, ENG / Dostępne języki: POL, ENG
+  language: POL
+
+# Infinite duration display settings / Ustawienia wyświetlania nieskończonego czasu
+# This affects how "INFINITE" duration is displayed for pets and costumes / To wpływa na sposób wyświetlania "INFINITE" dla petów i kostiumów
+infinite_duration:
+  # Display text for infinite duration / Tekst wyświetlany dla nieskończonego czasu
+  # You can use color codes like &a, &b, &#FF0000 / Możesz używać kodów kolorów jak &a, &b, &#FF0000
+  display_text: '&#FB0808NA ZAWSZE'
+  
+  # Text used in Polish format (for lore, messages) / Tekst używany w polskim formacie (dla lore, wiadomości)
+  polish_text: NA ZAWSZE
+
+# Database settings / Ustawienia bazy danych
+database:
+  # Enable SQLite database for data persistence / Włącz bazę danych SQLite do przechowywania danych
+  enabled: true
+  
+  # Database file name (stored in plugin data folder) / Nazwa pliku bazy danych
+  filename: "stormszafka.db"
+  
+  # Auto-save interval in minutes / Interwał automatycznego zapisywania w minutach
+  auto_save_interval: 10
+
+# Activation settings / Ustawienia aktywacji
+# Settings for activating pets and costumes by right-clicking items / Ustawienia aktywacji petów i kostiumów przez kliknięcie prawym przyciskiem
+activation:
+  # Allow replacing active costume with another costume by right-clicking / Pozwól na zamianę aktywnego kostiumu na inny przez kliknięcie prawym
+  # If false, player must first remove the active costume before activating a new one / Jeśli false, gracz musi najpierw zdjąć aktywny kostium przed aktywacją nowego
+  allow_costume_swap: false
+  
+  # Allow replacing active pet with another pet by right-clicking / Pozwól na zamianę aktywnego peta na innego przez kliknięcie prawym
+  # If false, player must first remove the active pet before activating a new one / Jeśli false, gracz musi najpierw zdjąć aktywnego peta przed aktywacją nowego
+  allow_pet_swap: false
+
+# Pet movement and behavior settings / Ustawienia ruchu i zachowania petów
+# These settings affect all pets globally, but can be overridden in individual pet configuration files / Te ustawienia wpływają na wszystkie pety globalnie, ale mogą być nadpisane w indywidualnych plikach konfiguracyjnych petów
+pets:
+  # Preview menu settings / Ustawienia menu podglądu
+  preview:
+    # Extension cost line format / Format linii kosztu przedłużenia
+    # {cost} - Cost value / Wartość kosztu
+    extension_cost_line: "&7Koszt przedłużenia: &c{cost} serc na dzień!"
+    # Empty line before extension cost / Pusta linia przed kosztem przedłużenia
+    extension_cost_prefix: "&7"
+  
+  # Animation settings / Ustawienia animacji
+  animation:
+    # Enable or disable the floating animation (up and down movement) / Włącz lub wyłącz animację unoszenia (ruch w górę i w dół)
+    floating_enabled: true
+    
+    # Whether pets should rotate with the player / Czy pety powinny obracać się z graczem
+    rotate_with_player: true
+    
+    # Whether pets should be invisible when the player is invisible / Czy pety powinny być niewidoczne, gdy gracz jest niewidoczny
+    # (when player has invisibility potion effect or is in spectator mode) / (gdy gracz ma efekt mikstury niewidzialności lub jest w trybie obserwatora)
+    hide_when_player_invisible: true
+    
+    # Default position of pets relative to the player / Domyślna pozycja petów względem gracza
+    # Options: RIGHT, LEFT, FRONT, BACK / Opcje: RIGHT, LEFT, FRONT, BACK
+    # This can be overridden in individual pet configuration files / To może być nadpisane w indywidualnych plikach konfiguracyjnych petów
+    default_position: RIGHT
+    
+    # Default distance from player / Domyślna odległość od gracza
+    # This can be overridden in individual pet configuration files / To może być nadpisane w indywidualnych plikach konfiguracyjnych petów
+    default_distance: 1.0
+    
+    # Whether pets should have particle effects / Czy pety powinny mieć efekty cząsteczkowe
+    particles_enabled: true
+    
+    # Whether pets should make sounds occasionally / Czy pety powinny czasami wydawać dźwięki
+    sounds_enabled: false
+    
+    # Whether pets should teleport to the player if they get too far away / Czy pety powinny teleportować się do gracza, jeśli znajdą się zbyt daleko
+    teleport_when_far: true
+    
+    # Maximum distance before teleporting / Maksymalna odległość przed teleportacją
+    teleport_distance: 10.0
+  
+# Costume settings / Ustawienia kostiumów
+costumes:
+  # Preview menu settings / Ustawienia menu podglądu
+  preview:
+    # Extension cost line format / Format linii kosztu przedłużenia
+    # {cost} - Cost value / Wartość kosztu
+    extension_cost_line: "&7Koszt przedłużenia: &c{cost}$ na dzień"
+    # Empty line before extension cost / Pusta linia przed kosztem przedłużenia
+    extension_cost_prefix: ""
+  
+  # Korona Anarchii support settings / Ustawienia wsparcia dla Korony Anarchii
+  korona_anarchii:
+    # Enable or disable Korona Anarchii support / Włącz lub wyłącz wsparcie dla Korony Anarchii
+    enabled: true
+    
+    # The exact name of the Korona Anarchii item to detect / Dokładna nazwa przedmiotu Korona Anarchii do wykrycia
+    item_name: §6Korona ANARCHII
+    
+    # Effects to apply when wearing Korona Anarchii under a costume / Efekty do zastosowania podczas noszenia Korony Anarchii pod kostiumem
+    effects:
+      # Speed effect (level 2) / Efekt szybkości (poziom 2)
+      speed:
+        enabled: true
+        level: 1 # Level 1 = Speed II in-game / Poziom 1 = Szybkość II w grze
+        duration: 160 # Duration in ticks (160 ticks = 8 seconds, longer to prevent flickering) / Czas trwania w tickach (160 ticków = 8 sekund, dłużej aby zapobiec migotaniu)
+      
+      # Fire Resistance effect / Efekt odporności na ogień
+      fire_resistance:
+        enabled: true
+        level: 0 # Level 0 = Fire Resistance I in-game / Poziom 0 = Odporność na ogień I w grze
+        duration: 160 # Duration in ticks (160 ticks = 8 seconds, longer to prevent flickering) / Czas trwania w tickach (160 ticków = 8 sekund, dłużej aby zapobiec migotaniu)
+      
+      # Strength effect (level 2) / Efekt siły (poziom 2)
+      strength:
+        enabled: true
+        level: 1 # Level 1 = Strength II in-game / Poziom 1 = Siła II w grze
+        duration: 100
+      
+      # Resistance effect (level 3) / Efekt odporności (poziom 3)
+      resistance:
+        enabled: true
+        level: 2 # Level 2 = Resistance III in-game / Poziom 2 = Odporność III w grze
+        duration: 100
+      
+      # Luck effect / Efekt szczęścia
+      luck:
+        enabled: true
+        level: 0 # Level 0 = Luck I in-game / Poziom 0 = Szczęście I w grze
+        duration: 100
+  
+  # Sakiewka Dropu support settings / Ustawienia wsparcia dla Sakiewki Dropu
+  sakiewka_dropu:
+    # Enable or disable Sakiewka Dropu support / Włącz lub wyłącz wsparcie dla Sakiewki Dropu
+    enabled: true
+    
+    # Debug mode - logs more information about item replacements / Tryb debugowania - loguje więcej informacji o zastępowaniu przedmiotów
+    debug: false
+  
+  # Enchanted Books support settings / Ustawienia wsparcia dla Zaczarowanych Książek
+  enchanted_books:
+    # Enable or disable Enchanted Books support for costumes / Włącz lub wyłącz wsparcie Zaczarowanych Książek dla kostiumów
+    enabled: true
+    
+    # Debug mode - logs more information about enchantment detection and application / Tryb debugowania - loguje więcej informacji o wykrywaniu i stosowaniu zaklęć
+    debug: false
+    
+    # Check interval in ticks (60 ticks = 3 seconds) / Interwał sprawdzania w tickach (60 ticków = 3 sekundy)
+    check_interval: 60
+    
+    # Enchantment settings / Ustawienia zaklęć
+    enchantments:
+      # Niepodpalenie (Fire Resistance) enchantment settings / Ustawienia zaklęcia Niepodpalenie (Odporność na ogień)
+      niepodpalenie:
+        enabled: true
+        effect_duration: 100 # Duration in ticks (100 ticks = 5 seconds) / Czas trwania w tickach (100 ticków = 5 sekund)
+      
+      # Wytrzymałość (Durability) enchantment settings / Ustawienia zaklęcia Wytrzymałość (Trwałość)
+      wytrzymalosc:
+        enabled: true
+        reduction_chance: 0.5 # 50% chance to prevent damage / 50% szansy na zapobieżenie obrażeniom
+      
+      # Regeneracja (Regeneration) enchantment settings / Ustawienia zaklęcia Regeneracja
+      regeneracja:
+        enabled: true
+        effect_duration: 160 # Duration in ticks (160 ticks = 8 seconds) / Czas trwania w tickach (160 ticków = 8 sekund)
+        effect_level: 1 # Level 1 = Regeneration II in-game / Poziom 1 = Regeneracja II w grze
+      
+      # Unik (Dodge) enchantment settings / Ustawienia zaklęcia Unik
+      unik:
+        enabled: true
+        message_enabled: true # Whether to show a message when dodging / Czy pokazywać wiadomość podczas unikania
+      
+      # Ułaskawienie (Grace) enchantment settings / Ustawienia zaklęcia Ułaskawienie
+      ulaskawienie:
+        enabled: true

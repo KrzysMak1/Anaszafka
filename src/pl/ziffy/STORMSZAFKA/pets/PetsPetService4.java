@@ -419,7 +419,7 @@ public class PetsPetService4
                 return new pl.ziffy.STORMSZAFKA.pets.items.PetsPetService4();
             }
             case "aniolek": {
-                return new _();
+                return new _tmp();
             }
             case "pancernik": {
                 return new O();
@@ -671,7 +671,7 @@ public class PetsPetService4
         return PetsPetService1("Cukiereczek", Material.PLAYER_HEAD, s);
     }
     
-    public static ItemStack _(final String s) {
+    public static ItemStack _tmp(final String s) {
         return PetsPetService1("Rozdymek", Material.PLAYER_HEAD, s);
     }
     

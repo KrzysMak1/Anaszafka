@@ -1,0 +1,88 @@
+# Konfiguracja Kostiumu Przeciwzakażeniowego
+
+# Przedmiot aktywacyjny (ten który gracz dostaje do ekwipunku)
+activation_item:
+  material: LEATHER_CHESTPLATE
+  display_name: "&7Kostium &aprzeciwzakażeniowy &7na czas &3{time}"
+  preview_display_name: "&7Kostium &aprzeciwzakażeniowy"
+  lore:
+    - "&8Unikatowa wersja!"
+    - "&7Został on wydany w trakcie &funikatowego"
+    - "&7wydarzenia &f21 marca 2025 roku &8(&2ZARAZA&8)"
+    - "&7"
+    - "&7Dzięki temu przedmiotowi otrzymasz"
+    - "&funikatowy wygląd oraz epickie bonusy."
+    - "&7"
+    - "&7Lista bonusów:"
+    - "&8 » &7Po kliknięciu &azarażasz &7przeciwnika,"
+    - "&7 zadając mu większe &cobrażenia&7."
+    - "&8 » &4+3 &7serca"
+    - "&8 » &b+10% &7obrony"
+    - "&8 » &7Odporność na &cnegatywne efekty"
+  custom_model_data: 0
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+  leather_color: "255,215,0"  # Złoty
+
+# Wygląd zbroi na graczu
+armor_appearance:
+  display_name: "&7Zbroja &aPrzeciwzakażeniowa"
+  base_lore:
+    - "&7"
+    - "&e&lKliknij&r &7aby przełączyć całą &fzbroję&7!"
+  
+  # Kolory poszczególnych części zbroi (R,G,B)
+  armor_colors:
+    chestplate: "255,215,0"  # Złoty
+    leggings: "255,215,0"    # Złoty
+    boots: "255,215,0"       # Złoty
+  
+  # Tekstura głowy (player head)
+  helmet:
+    primary_texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTI4MzA0Y2RjOTY1YzQxNzQwNWY5NjVjM2I2M2NhNGZiZjg2ZTg4ZTM0MWQ2OTMyN2NhMjdlM2EwOGMwYTIwMCJ9fX0="
+  
+  unbreakable: true
+  item_flags:
+    - HIDE_ATTRIBUTES
+    - HIDE_UNBREAKABLE
+    - HIDE_DYE
+
+# Efekty kostiumu
+effects:
+  # Dodatkowe serca
+  extra_hearts:
+    enabled: true
+    hearts: 3  # +3 serca (6 HP)
+  
+  # Bonus do obrony
+  defense_bonus:
+    enabled: true
+    multiplier: 0.90  # -10% otrzymywanych obrażeń (więcej obrony)
+  
+  # Odporność na negatywne efekty
+  negative_effects_immunity:
+    enabled: true
+  
+  # Zarażenie przeciwnika
+  infection:
+    enabled: true
+    duration: 10  # 10 sekund
+    damage_multiplier: 1.5  # +50% obrażeń dla zarażonych
+    cooldown: 60  # 60 sekund cooldown
+  
+  # Dźwięki
+  sounds:
+    equip: ITEM_ARMOR_EQUIP_LEATHER
+    equip_volume: 1.0
+    equip_pitch: 1.0
+    infection: ENTITY_ZOMBIE_VILLAGER_CONVERTED
+    infection_volume: 1.0
+    infection_pitch: 0.8
+
+# Przedłużanie kostiumu
+extension:
+  enabled: true
+  cost_per_day: 5000  # Koszt w walucie serwerowej za 1 dzień przedłużenia
